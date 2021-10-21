@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.8.0 on darwin)" generated="20211021 15:47:51.606" rpa="false" schemaversion="2">
+<suite id="s1" name="TC1" source="/Users/bharatgurnani/PycharmProjects/dopDemo/TestCases/TC1.robot">
+<test id="s1-t1" name="LoginTest">
+<kw name="Launch Browser and open application">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20211021 15:47:51.865" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fd6a541caf0&gt;</msg>
+<status status="PASS" starttime="20211021 15:47:51.864" endtime="20211021 15:47:51.865"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20211021 15:47:51.865" endtime="20211021 15:47:51.865"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211021 15:47:51.865" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&amp;openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_ya_signin&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=inflex&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;'.</msg>
+<status status="PASS" starttime="20211021 15:47:51.865" endtime="20211021 15:47:55.070"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211021 15:47:55.070" endtime="20211021 15:47:55.206"/>
+</kw>
+<status status="PASS" starttime="20211021 15:47:51.864" endtime="20211021 15:47:55.206"/>
+</kw>
+<kw name="Sign into the application">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>ap_email</arg>
+<arg>bharat.gurnani88@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211021 15:47:55.208" level="INFO">Typing text 'bharat.gurnani88@gmail.com' into text field 'ap_email'.</msg>
+<status status="PASS" starttime="20211021 15:47:55.207" endtime="20211021 15:47:55.609"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211021 15:47:55.610" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" starttime="20211021 15:47:55.610" endtime="20211021 15:47:56.529"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>ap_password</arg>
+<arg>Onsite@2020</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211021 15:47:56.530" level="INFO">Typing text 'Onsite@2020' into text field 'ap_password'.</msg>
+<status status="PASS" starttime="20211021 15:47:56.529" endtime="20211021 15:47:56.604"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>signInSubmit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211021 15:47:56.605" level="INFO">Clicking button 'signInSubmit'.</msg>
+<status status="PASS" starttime="20211021 15:47:56.605" endtime="20211021 15:47:59.376"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[@id="nav-logo-sprites"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211021 15:47:59.376" endtime="20211021 15:47:59.438"/>
+</kw>
+<status status="PASS" starttime="20211021 15:47:55.206" endtime="20211021 15:47:59.438"/>
+</kw>
+<kw name="Add Item the cart">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>searchDropdownBox</arg>
+<arg>search-alias=electronics</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20211021 15:47:59.439" level="INFO">Selecting options from selection list 'searchDropdownBox' by value search-alias=electronics.</msg>
+<status status="PASS" starttime="20211021 15:47:59.439" endtime="20211021 15:47:59.648"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>twotabsearchtextbox</arg>
+<arg>one plus Mobile</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211021 15:47:59.649" level="INFO">Typing text 'one plus Mobile' into text field 'twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20211021 15:47:59.649" endtime="20211021 15:47:59.763"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>nav-search-submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211021 15:47:59.763" level="INFO">Clicking element 'nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20211021 15:47:59.763" endtime="20211021 15:48:02.012"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>partial link :OnePlus Nord CE 5G</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211021 15:48:02.012" endtime="20211021 15:48:02.521"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>partial link :OnePlus Nord CE 5G</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211021 15:48:02.521" level="INFO">Clicking link 'partial link :OnePlus Nord CE 5G'.</msg>
+<status status="PASS" starttime="20211021 15:48:02.521" endtime="20211021 15:48:03.163"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20211021 15:48:03.166" level="INFO">${handles} = ['CDwindow-78A9928EE2A6E6EF4EF121DCA2EFAA77', 'CDwindow-9F2A8950F661F0FB316A310487DF16F9']</msg>
+<status status="PASS" starttime="20211021 15:48:03.163" endtime="20211021 15:48:03.166"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20211021 15:48:03.166" endtime="20211021 15:48:03.280"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>//input[@id="add-to-cart-button" and @name="submit.add-to-cart"]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20211021 15:48:03.280" level="INFO">Simulating Mouse Over on element '//input[@id="add-to-cart-button" and @name="submit.add-to-cart"]'.</msg>
+<status status="PASS" starttime="20211021 15:48:03.280" endtime="20211021 15:48:07.996"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@id="add-to-cart-button" and @name="submit.add-to-cart"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211021 15:48:07.997" level="INFO">Clicking element '//input[@id="add-to-cart-button" and @name="submit.add-to-cart"]'.</msg>
+<status status="PASS" starttime="20211021 15:48:07.996" endtime="20211021 15:48:08.130"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@class='a-button-input' and @aria-labelledby='attach-sidesheet-view-cart-button-announce']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211021 15:48:08.130" endtime="20211021 15:48:10.698"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@class='a-button-input' and @aria-labelledby='attach-sidesheet-view-cart-button-announce']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211021 15:48:10.698" level="INFO">Clicking element '//input[@class='a-button-input' and @aria-labelledby='attach-sidesheet-view-cart-button-announce']'.</msg>
+<status status="PASS" starttime="20211021 15:48:10.698" endtime="20211021 15:48:12.847"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@value='Save for later' and @type="submit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211021 15:48:12.847" endtime="20211021 15:48:12.891"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@value='Save for later' and @type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211021 15:48:12.892" level="INFO">Clicking element '//input[@value='Save for later' and @type="submit"]'.</msg>
+<status status="PASS" starttime="20211021 15:48:12.892" endtime="20211021 15:48:12.979"/>
+</kw>
+<status status="PASS" starttime="20211021 15:47:59.438" endtime="20211021 15:48:12.979"/>
+</kw>
+<kw name="Close the browser">
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20211021 15:48:12.981" endtime="20211021 15:48:13.045"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211021 15:48:13.045" endtime="20211021 15:48:13.338"/>
+</kw>
+<status status="PASS" starttime="20211021 15:48:12.980" endtime="20211021 15:48:13.338"/>
+</kw>
+<status status="PASS" starttime="20211021 15:47:51.863" endtime="20211021 15:48:13.339"/>
+</test>
+<status status="PASS" starttime="20211021 15:47:51.607" endtime="20211021 15:48:13.341"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC1">TC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
